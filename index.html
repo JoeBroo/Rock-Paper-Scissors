@@ -15,15 +15,30 @@
 <!-- Javascript begins here-->
 <script>
     console.log('Welcome to Rock Paper Scissors! To begin, type "rock" "paper" or "scissors". ');
-    let rock = 0;
-    let paper = 1;
-    let scissors = 2
+
+    const rock = 1;
+    const paper = 2;
+    const scissors = 3;
+
+    // function that displays the computer's choice.
 
     function getComputerChoice() {
+
+        let computerChoice = Math.floor(Math.random() * 3) + 1;
         
+        if (computerChoice == 1) {
+            console.log("Computer chose rock.")
+        } else if (computerChoice == 2) {
+            console.log("Computer chose paper.")
+        } else {
+            console.log("Computer chose scissors.")
+        }
     }
-</script>
-    
-    
-</body>
-</html>
+        
+
+    </script>
+
+    </body>
+    </html>
+
+        
