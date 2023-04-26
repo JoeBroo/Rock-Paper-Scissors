@@ -1,2 +1,2 @@
 # Rock-Paper-Scissors
-A simple rock, paper, scissors game
+This is a simple Rock, Paper, Scissors game. Users can click the buttons to start the game and make their choices.
