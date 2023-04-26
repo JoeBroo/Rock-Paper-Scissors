@@ -1,0 +1,22 @@
+* {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rebeccapurple;
+    background-color: white;
+}
+
+.start {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.rock,
+.paper,
+.scissors {
+    border: 2px solid rebeccapurple;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 10px;
+}
