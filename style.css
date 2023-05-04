@@ -20,3 +20,11 @@
     padding: 5px;
     border-radius: 10px;
 }
+
+.counter {
+    font-family: Verdana;
+    font-size: 10px;
+    color: green;
+    background-color: white;
+    border-radius: 5px;
+}
