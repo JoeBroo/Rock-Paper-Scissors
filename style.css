@@ -1,7 +1,7 @@
 * {
-    font-family: sans-serif;
+    font-family: sans-serif, Verdana, "Times New Roman";
     font-size: 20px;
-    color: rebeccapurple;
+    color: royalblue;
     background-color: white;
 }
 
@@ -15,16 +15,27 @@
 .rock,
 .paper,
 .scissors {
-    border: 2px solid rebeccapurple;
-    background-color: whitesmoke;
+    border: 2px solid white;
+    color: white;
+    background-color: royalblue;
     padding: 5px;
+    margin: 5px;
     border-radius: 10px;
 }
 
 .counter {
     font-family: Verdana;
-    font-size: 10px;
+    font-size: 18px;
     color: green;
     background-color: white;
     border-radius: 5px;
+}
+
+.scores {
+    border: 5px solid royalblue;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
 }
