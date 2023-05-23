@@ -14,6 +14,8 @@ let counter = 0;
 //Scoreboard to display player and computer scores
 const scoreBoard = document.querySelector('.scores');
 const para = document.createElement('p');
+const displayPlayer = document.querySelector('.player-score');
+const displayComputer = document.querySelector('.computer-score');
 
 //Button for testing: Increments number of points when button is clicked.
 
@@ -22,7 +24,8 @@ counterButton.addEventListener('click', addPoints);
 
 function addPoints() {
     counter++;
-    console.log(`The current count is: ${counter}. `);
+    scoreBoard.appendChild(para);
+    para.textContent = counter;
 }
 
 
@@ -35,21 +38,33 @@ const btnRock = document.querySelector('.rock');
 btnRock.addEventListener('click', () => {
     const playerChoice = 'Rock';
     roundOne(playerChoice);
+    displayPlayer.textContent = `Your score is  ${playerScore}`; 
+    displayComputer.textContent = `Computer score is ${computerScore}`;
 })
 
 //Sets player's choice to Paper
 const btnPaper = document.querySelector('.paper');
 btnPaper.addEventListener('click', () => {
     const  playerChoice = 'Paper';
-    roundOne(playerChoice)
+    roundOne(playerChoice);
+    displayPlayer.textContent = `Your score is ${playerScore}`;
+    displayComputer.textContent = `Computer score is ${computerScore}`;
 })
 
 //Sets player's choice to Scissors
 const btnScissors = document.querySelector('.scissors'); 
 btnScissors.addEventListener('click', () => {
     const playerChoice = 'Scissors';
-    roundOne(playerChoice)
+    roundOne(playerChoice);
+    displayPlayer.textContent = `Your score is ${playerScore}`
+    displayComputer.textContent = `Computer Score is ${computerScore}`;
 })
+
+//Stops game when score is equal to 5.
+
+if (playerScore === 5) {
+    scoreBoard.textContent = 'Game over! ';
+}
 
 //Plays a round of the game
 function roundOne(playerChoice, computerChoice) {
