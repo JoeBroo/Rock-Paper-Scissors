@@ -9,25 +9,11 @@ let computerScore = 0;
 
 let playerChoice = '';
 
-let counter = 0;
-
 //Scoreboard to display player and computer scores
 const scoreBoard = document.querySelector('.scores');
 const para = document.createElement('p');
 const displayPlayer = document.querySelector('.player-score');
 const displayComputer = document.querySelector('.computer-score');
-
-//Button for testing: Increments number of points when button is clicked.
-
-const counterButton = document.querySelector('.counter');
-counterButton.addEventListener('click', addPoints);
-
-function addPoints() {
-    counter++;
-    scoreBoard.appendChild(para);
-    para.textContent = counter;
-}
-
 
 // Plays round when user clicks Start Game button
 const startGame = document.querySelector('.start');
@@ -62,9 +48,6 @@ btnScissors.addEventListener('click', () => {
 
 //Stops game when score is equal to 5.
 
-if (playerScore === 5) {
-    scoreBoard.textContent = 'Game over! ';
-}
 
 //Plays a round of the game
 function roundOne(playerChoice, computerChoice) {
@@ -75,6 +58,11 @@ function roundOne(playerChoice, computerChoice) {
     console.log(playerChoice);
     console.log(computerChoice);
 
+    if (playerScore === 5 || computerScore === 5) {
+        scoreBoard.appendChild(para);
+        para.textContent = 'Game over! '
+    }
+    
     if (playerChoice == 1 || playerChoice == "Rock" && computerChoice == 1) {
         console.log("It's a draw! ");
 
@@ -126,8 +114,8 @@ function roundOne(playerChoice, computerChoice) {
     } else if (playerChoice = 3 || playerChoice == "Scissors" && computerChoice == 3) {
         console.log("It's a draw! ");
 
-    // } else {
-    //     console.log('Please choose "Rock", "Paper", or "Scissors". ');
+    } else {
+        console.log('Please choose "Rock", "Paper", or "Scissors". ');
     }
 
     if (computerScore === 5) {
