@@ -23,19 +23,11 @@
     border-radius: 10px;
 }
 
-.counter {
-    font-family: Verdana;
-    font-size: 18px;
-    color: green;
-    background-color: white;
-    border-radius: 5px;
-}
 
 .scores {
-    border: 5px solid royalblue;
     margin: 10px;
     padding: 10px;
-    text-decoration: underline;
+    text-decoration: none;
     display: flex;
     flex-direction: column;
 }
